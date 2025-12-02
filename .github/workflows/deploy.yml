@@ -15,8 +15,8 @@ jobs:
       - name: Copy index.html to Azure VM
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.PUBLIC_IP }}
+          host: ${{ secrets.PUBLIC_IP}}
           username: azureuser
-          key: ${{ secrets.PUBLIC_KEY }}
+          key: ${{ secrets.SECRET_KEY}}
           source: "index.html"
           target: "/var/www/devops-app/"
